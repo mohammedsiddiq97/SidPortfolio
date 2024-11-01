@@ -1,0 +1,73 @@
+.container-fluid {
+    background-color: white;
+    color: black;
+    height: 100%;
+    width: 100%;
+
+}
+
+h2 {
+    font-size: 2em;
+    background: linear-gradient(45deg, red, blue, green, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contactImage {
+    border: 2px solid blue;
+    height: 320px;
+    width: 320px;
+}
+
+.contactus {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px;
+    font-family: Robotoflex Variablefont Grad Xtra Yopq Ytas Ytde Ytfi Ytlc Ytuc Opsz Slnt Wdth Wght, sans-serif;
+    font-variation-settings: "wght" 558, "wdth" 57.5, "opsz" 60.2;
+    text-transform: uppercase;
+}
+
+#emailHelp {
+    color: var(--dim-grey) !important;
+    text-transform: none;
+    font-family: clone-rounded-latin, sans-serif;
+    font-size: .75rem;
+    line-height: 1.2;
+    opacity: 2px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type=number],
+textarea,
+select.form-control {
+    border: 1px solid grey;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.text-danger {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.875rem; /* Optional: Adjust the font size */
+  }
+  
+  .text-danger span {
+    display: block;
+    margin-top: 3px; /* Optional: Adjust space between error messages */
+  }
+  
+@media screen and (max-width: 1000px) {
+    .contactimagecontainer {
+        display: none;
+    }
+}

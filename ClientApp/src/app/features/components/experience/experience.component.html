@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <h2 class="mb-4 title">Experience</h2>
+    <div class="row">
+      <div *ngFor="let experience of experiences" class="col-lg-4 col-md-4 col-sm-12 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ experience.jobTitle }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ experience.company }}</h6>
+            <p class="card-text"><small class="text-muted">{{ experience.duration }}</small></p>
+            <ul>
+              <li *ngFor="let experienceAssociation of experience.experienceAssociations">{{ experienceAssociation.responsibilities }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,78 @@
+.container-fluid {
+    position: relative;
+    height: 100vh;
+    background-color: black;
+}
+canvas {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.text {
+    display: none;
+    top: 50%;
+    position: absolute;
+    left: 20%;
+    font-size: x-large;
+    color: white;
+    text-align: center;
+}
+
+.aboutmebutton {
+    transition: transform 0.3s ease-in-out;
+    position: absolute;
+    left: 28%;
+    top: 85%;
+}
+button {
+    background: linear-gradient(135deg, #ffd700, #ff8c00);
+    color: white;
+}
+.aboutmebutton:hover {
+    transform: scale(1.1);
+}
+
+.nav-bar {
+    position: absolute;
+    top: 0%;
+    width: 98%;
+    z-index: 222;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark);
+    opacity: 0;
+    z-index: 99;
+    pointer-events: none;
+}
+
+.d-lg-block {
+    position: absolute !important;
+    left: 69% !important;
+    top: 22% !important;
+}
+
+.profiles {
+    position: absolute;
+    top: 40%;
+    left: 1%;
+    color: wheat;
+    width: auto;
+    z-index: 5555;
+}
+
+@media (max-width: 761px) {
+    .canvas-wrapper {
+        display: none;
+    }
+
+    .text {
+        display: block !important;
+    }
+}

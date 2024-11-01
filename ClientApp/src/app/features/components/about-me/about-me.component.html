@@ -1,0 +1,32 @@
+<div class="aboutmebody ">
+    <div class="container-fluid" style="padding: 50px;">
+        <div class="row">
+            <h2 class="aboutme-text">About Me</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 aboutmecontainer">
+                <div class="aboutmesection">
+                    <p> As a seasoned DotNet FullStack developer with two years of hands-on experience,
+                        I have cultivated a robust skill set that enables me to deliver
+                        comprehensive solutions across both front-end and back-end development.
+                        My expertise lies in a diverse range of technologies, including C#, .NET Core,
+                        Entity Framework, Angular,
+                        SQL, and Azure, which collectively empower me to create efficient, scalable, and secure
+                        applications.</p>
+                    <div class="col-sm-12">
+                        <span class="skills" *ngFor="let technicalSkill of technicalSkills">
+                            {{ technicalSkill }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 Imagecontainer ">
+                <div class="aboutmesection">
+                    <div class="image">
+                        <img src="assets\man-desktop.webp" alt="Man">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

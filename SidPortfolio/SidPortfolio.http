@@ -1,0 +1,6 @@
+@SidPortfolio_HostAddress = http://localhost:5058
+
+GET {{SidPortfolio_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <div class="row" style="gap:50px;margin: 20px;">
+        <div class="col-lg-6 contactimagecontainer ">
+            <div class="contactusimage" style="height: 100%;">
+                <div class="contactimage d-flex justify-content-center align-items-center" style="height: inherit;">
+                    <img src="assets\contact-us.png" style="height: 520px;" alt="Man">
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-5 contactcontainer">
+            <div class="contactus  p-5 my-3">
+                <h2>Contact Us</h2>
+                <div class="clr-col-md-8">
+                    <form #contactus="ngForm">
+                        <div class="form-group" style="display: grid; gap: 32px;">
+                            <div class="name">
+                                <label for="name" class="control-label">Name</label>
+                                <input type="text" required name="userDetails.name"  #name="ngModel" [(ngModel)]="userDetails.name"
+                                    class="form-control" id="name" name="name" placeholder="Enter name">
+                                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="text-danger">
+                                        <span *ngIf="name.errors?.['required']">Name is required.</span>
+                                      </div>
+                            </div>
+                                <div class="email">
+                                  <label for="exampleInputEmail1" class="control-label">Email</label>
+                                  <input 
+                                    type="email" 
+                                    required 
+                                    class="form-control" 
+                                    [(ngModel)]="userDetails.email" 
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                    name="email"
+                                    id="email" 
+                                    aria-describedby="emailHelp" 
+                                    placeholder="Enter email"
+                                    #email="ngModel"
+                                  />
+                                  <small id="emailHelp" class="form-text text-muted">
+                                    We'll never share your email with anyone else.
+                                  </small>
+                                  <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                                    <span *ngIf="email.errors?.['required']">Email is required.</span>
+                                    <span *ngIf="email.errors?.['pattern']">Invalid email format.</span>
+                                  </div>
+                                </div>
+                              
+                            <div class="phonenumber">
+                                <label for="phonenumber" class="control-label">Phone Number</label>
+                                <input type="number" name="phonenumber" [(ngModel)]="userDetails.phoneNumber"
+                                    name="phoneNumber" class="form-control" id="phonenumber"
+                                    placeholder="Enter mobilenumber" value="">
+                            </div>
+                        </div>
+                        <div class="description" style="margin-top: 32px;">
+                            <label for="exampleFormControlTextarea1" class="control-label">Description</label>
+                            <textarea class="form-control" name="description" [(ngModel)]="userDetails.description"
+                                id="exampleFormControlTextarea1" rows="3" placeholder="Enter message"></textarea>
+                        </div>
+                        <div class="container mt-5">
+                            <div class="d-flex justify-content-center align-items-center" *ngIf="!showButton">
+                                <button type="button" (click)="SaveUserDetails(contactus)"
+                                    [disabled]="!contactus.valid" class="btn btn-success">SUBMIT</button>
+                            </div>
+                            <div class="mt-n5" *ngIf="showButton">
+                                <app-spinner></app-spinner>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

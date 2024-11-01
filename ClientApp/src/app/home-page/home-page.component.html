@@ -1,0 +1,36 @@
+<div class="container-fluid" style="margin: 0px; padding: 0px;">
+  <div class="main-section" style="height: 100%; width: 100%;">
+    <div class="nav-bar">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="profiles">
+      <app-social-media-profiles></app-social-media-profiles>
+    </div>
+    <div class="canvas-wrapper" style="height: 100%;width: 100%;">
+      <canvas id="canvas" style="width: 100%;" #canvass></canvas>
+    </div>
+    <div class="text">
+      <span>For optimal experience, please switch to the desktop version.</span>
+    </div>
+    <div class="aboutmebutton">
+      <button type="button" (click)="onClickAboutMe()" class="btn">Know More About Me</button>
+    </div>
+  </div>
+  <section id="componentsection">
+    <div id="aboutMeSection" #aboutMeSection>
+      <app-about-me></app-about-me>
+    </div>
+    <div id="certifications" style="margin: 20px;">
+      <app-certifications></app-certifications>
+    </div>
+    <div id="Experience" style="margin: 20px;">
+      <app-experience></app-experience>
+    </div>
+    <div id="contactSection">
+      <app-contact></app-contact>
+    </div>
+    <div id="footer">
+      <app-footer></app-footer>
+    </div>
+  </section>
+</div>
